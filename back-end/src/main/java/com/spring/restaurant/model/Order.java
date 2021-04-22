@@ -6,26 +6,19 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@MappedSuperclass
 @Entity
-@Table(name = "order")
+@Table(name = "orderfood")
 public class Order extends CategoryOrder{
 
     @Column(name = "price")
     private int price;
-
-    @Column(name = "img")
+    @Column(name = "image")
     private String img;
-
     @Column(name = "description")
     private String description;
-
-
-
 }

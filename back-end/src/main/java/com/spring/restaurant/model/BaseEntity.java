@@ -1,8 +1,6 @@
 package com.spring.restaurant.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -13,7 +11,8 @@ import javax.persistence.*;
 public class BaseEntity {
 
     @Id
-    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @Column(name = "id")
+    private Long id;
+
 }
