@@ -4,9 +4,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class categoryOrder extends BaseEntity {
+@MappedSuperclass
+public class CategoryOrder extends BaseEntity {
+
+    @Column(name = "name")
     private String name;
 }
