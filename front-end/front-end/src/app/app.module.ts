@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OrderitemsComponent } from './components/orderitems/orderitems.component';
+import { CategoryItemsComponent } from './components/category-items/category-items.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    OrderitemsComponent
+    OrderitemsComponent,
+    CategoryItemsComponent
   ],
   imports: [
     BrowserModule,
