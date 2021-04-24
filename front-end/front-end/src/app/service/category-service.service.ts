@@ -10,12 +10,12 @@ import { Category } from '../model/category';
 })
 export class CategoryServiceService {
 
-  private baseUrl: string = 'http://localhost:8080/api/allCategries';
+  private baseUrl: string = 'http://localhost:8080/api/allCategories';
   constructor(private http: HttpClient) { }
 
 
 
-  getOrders(): Observable<Category[]>{
+  getCategories(): Observable<Category[]>{
     return this.http.get<Category[]>(this.baseUrl).pipe(
       map(
         Response =>Response
