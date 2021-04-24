@@ -1,12 +1,12 @@
 export class Order {
 
-    id: Number; 
-    name: String;
-    description: String;
-    image: String;
-    price: Number;
-    data_create: Date;
-    data_update: Date;
+    public id: Number; 
+    public name: String;
+    public description: String;
+    public image: String;
+    public price: Number;
+    public data_create: Date;
+    public data_update: Date;
 
 
 

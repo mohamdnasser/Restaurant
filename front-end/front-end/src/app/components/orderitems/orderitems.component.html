@@ -1,1 +1,13 @@
-<p>orderitems works!</p>
+
+
+
+
+  <div *ngFor="let item of ordersArray " class="col-md-4 myorder">
+    <div class="card">
+      <img src="assets/img/logo-cook.jpg" alt="Denim Jeans" style="width:100%">
+      <h1>{{ item.name }}</h1>
+      <p class="price">{{ item.price }}</p>
+      <!-- <p class="dis">{{  }}</p> -->
+      <button class="btn btn-primary">Add to Cart</button>
+    </div>
+  </div> 

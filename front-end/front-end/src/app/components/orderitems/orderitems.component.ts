@@ -9,7 +9,7 @@ import { OrderServiceService } from 'src/app/service/order-service.service';
 })
 export class OrderitemsComponent implements OnInit {
 
-  private ordersArray: Order[] = [];
+  ordersArray: Order[] = [];
 
   constructor(private orderService: OrderServiceService) { }
 
@@ -20,7 +20,9 @@ export class OrderitemsComponent implements OnInit {
 
   getOrders(){
     this.orderService.getOrders().subscribe(
-      data => this.ordersArray = data
+      data => { 
+        this.ordersArray = data
+      }
     )
   }
 

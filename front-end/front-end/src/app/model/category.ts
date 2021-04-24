@@ -1,8 +1,8 @@
 export class Category {
 
-    id: Number; 
-    name: String;
-    data_create: Date;
-    data_update: Date;
+    public id: Number; 
+    public name: String;
+    public data_create: Date;
+    public data_update: Date;
 
 }
