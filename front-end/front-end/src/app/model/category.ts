@@ -1,13 +1,13 @@
 export class Category {
 
-    id: Number; 
-    name: String;
-    logo: String;
-    data_create: Date;
-    data_update: Date;
+    public id: Number; 
+    public name: String;
+    public logo: String;
+    public data_create: Date;
+    public data_update: Date;
 
 
-    constructor(id: Number, name: String,  logo: String, description: String, img: String, price: Number, data_create: Date, data_update: Date  ){
+    constructor(id: Number, name: String, logo: String, data_create: Date, data_update: Date ){
         this.id = id;
         this.name = name;
         this.logo = logo;

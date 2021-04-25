@@ -6,6 +6,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OrderitemsComponent } from './components/orderitems/orderitems.component';
 import { CategoryItemsComponent } from './components/category-items/category-items.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+
+  // http://localhost:4200/category
+  {path: 'category' , component: OrderitemsComponent},
+
+  // http://localhost:4200/category/id
+  {path: 'category/:id' , component: OrderitemsComponent},
+
+  // http://localhost:4200/orders
+  {path: 'orders' , component: OrderitemsComponent},
+
+  // http://localhost:4200/
+  {path: '' , redirectTo: '/orders' , pathMatch: 'full'},
+
+  // http://localhost:4200/anythingDummy
+  {path: '**' , redirectTo: '/orders' , pathMatch: 'full'},
+
+];
 
 @NgModule({
   declarations: [
@@ -14,6 +34,7 @@ import { CategoryItemsComponent } from './components/category-items/category-ite
     CategoryItemsComponent
   ],
   imports: [
+    RouterModule.forRoot(routes),
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
