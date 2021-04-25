@@ -3,8 +3,9 @@ package com.spring.restaurant.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.engine.spi.Managed;
 
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -19,5 +20,8 @@ public class Category extends CategoryOrder {
     @JsonIgnore
     @OneToMany(mappedBy = "category")
     private Set<Order> Orders ;
+
+    @Column(name = "logo")
+    private String logo;
 
 }
