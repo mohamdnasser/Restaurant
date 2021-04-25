@@ -2,7 +2,10 @@
           <li class="active"><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
 
 
-          <li *ngFor="let item of categoryArray"><a href="#about"><i class="fas fa-utensils"></i> <span>{{item.name}}</span></a></li>
+          <li *ngFor="let item of categoryArray">
+              <a href="#about"><i class="{{item.logo}}"></i>
+                <span>{{item.name}}</span></a>
+            </li>
 
 
           <!-- <li><a href="#resume"><i class="fas fa-cocktail"></i> <span>Cold Drinks</span></a></li>
