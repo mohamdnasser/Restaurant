@@ -5,6 +5,7 @@ import com.spring.restaurant.model.Category;
 import com.spring.restaurant.model.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -20,4 +21,9 @@ public class OrderService {
     public List<Order> getAllOrders(){
         return orderRepository.findAll();
     }
+
+    public List<Order> getAllOrdersByCategoryId(Long id){
+        return orderRepository.findByCategoryId(id);
+    }
+
 }
