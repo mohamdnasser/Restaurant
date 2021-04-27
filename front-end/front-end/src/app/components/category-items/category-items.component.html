@@ -1,13 +1,20 @@
-        <ul>
+    
+    
+    
+    
+    
+    
+    
+    <ul>
           <li class="active"><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
 
 
           <li *ngFor="let item of categoryArray">
-              <a href="#about"><i class="{{item.logo}}"></i>
+              <a href="category/{{item.id}}"><i class="{{item.logo}}"></i>
                 <span>{{item.name}}</span></a>
             </li>
 
-
+            <!-- https://www.filgoal.com/videos -->
             
           <!-- <li><a href="#resume"><i class="fas fa-cocktail"></i> <span>Cold Drinks</span></a></li>
           <li><a href="#portfolio"><i class="fas fa-coffee"></i> Hot Drinks</a></li>
