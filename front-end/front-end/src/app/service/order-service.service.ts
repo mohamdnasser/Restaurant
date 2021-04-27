@@ -10,13 +10,14 @@ import { Order } from '../model/order';
 })
 export class OrderServiceService {
                                           
-  private baseUrl: string = 'http://localhost:8080/api/allOrders';
+  private baseUrl: string = 'http://localhost:8080/api/';
   constructor(private http: HttpClient) { }
 
 
 
   getOrders(): Observable<Order[]>{
-    return this.http.get<Order[]>(this.baseUrl).pipe(
+    // return this.http.get<Order[]>( `${this.baseUrl}allOrders` ).pipe(
+      return this.http.get<Order[]>( `${this.baseUrl}allOrders` ).pipe(
       map(
         Response =>Response
       )
@@ -24,7 +25,12 @@ export class OrderServiceService {
   }
 
 
-
-
+  getOrdersByCategoryId(id): Observable<Order[]>{
+    return this.http.get<Order[]>(`${this.baseUrl}category?id=${id}`).pipe(
+      map(
+        Response =>Response
+      )
+    )
+  }
 
 }
