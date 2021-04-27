@@ -1,11 +1,10 @@
 package com.spring.restaurant.service;
 
-import com.spring.restaurant.dao.OrderRepository;
 
+import com.spring.restaurant.dao.OrderRepository;
 import com.spring.restaurant.model.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 
 import java.util.List;
 
@@ -25,5 +24,4 @@ public class OrderService {
     public List<Order> getAllOrdersByCategoryId(Long id){
         return orderRepository.findByCategoryId(id);
     }
-
 }
