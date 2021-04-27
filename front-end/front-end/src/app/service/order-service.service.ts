@@ -33,4 +33,12 @@ export class OrderServiceService {
     )
   }
 
+  getOrdersByKey(word): Observable<Order[]>{
+    return this.http.get<Order[]>(`${this.baseUrl}orderByKey?word=${word}`).pipe(
+      map(
+        Response =>Response
+      )
+    )
+  }
+
 }

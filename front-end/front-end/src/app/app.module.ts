@@ -8,8 +8,11 @@ import { OrderitemsComponent } from './components/orderitems/orderitems.componen
 import { CategoryItemsComponent } from './components/category-items/category-items.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DropdownMenuComponent } from './components/dropdown-menu/dropdown-menu.component';
+import { SearchOrderComponent } from './components/search-order/search-order.component';
 
 const routes: Routes = [
+
+
 
   // http://localhost:4200/category
   {path: 'category' , component: OrderitemsComponent},
@@ -19,6 +22,9 @@ const routes: Routes = [
 
   // http://localhost:4200/orders
   {path: 'orders' , component: OrderitemsComponent},
+
+    // http://localhost:4200/orders/key
+    {path: 'orders/:key' , component: OrderitemsComponent},
 
   // http://localhost:4200/
   {path: '' , redirectTo: '/orders' , pathMatch: 'full'},
@@ -33,7 +39,8 @@ const routes: Routes = [
     AppComponent,
     OrderitemsComponent,
     CategoryItemsComponent,
-    DropdownMenuComponent
+    DropdownMenuComponent,
+    SearchOrderComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
