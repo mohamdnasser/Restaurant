@@ -35,6 +35,12 @@ public class OrderController {
     }
 
 
+    @GetMapping("orderByKey")
+    public List<Order> getOrdersByCategoryId(@RequestParam String word){
+        return orderService.getOrdersByKey(word);
+    }
+
+
 
 
 }
