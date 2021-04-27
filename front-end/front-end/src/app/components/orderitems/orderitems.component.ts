@@ -17,6 +17,16 @@ export class OrderitemsComponent implements OnInit {
              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe(
+      () => {
+        this.handleGetOrders();
+      }
+    )
+    
+
+  }
+
+  handleGetOrders(){
     let result = this.route.snapshot.paramMap.has('id');
     // alert(result);
     if (result){
@@ -24,8 +34,6 @@ export class OrderitemsComponent implements OnInit {
     } else {
       this.getOrders();
     }
-      
-    
   }
 
   getOrders(){

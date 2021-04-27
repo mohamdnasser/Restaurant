@@ -10,7 +10,7 @@
 
 
           <li *ngFor="let item of categoryArray">
-              <a href="category/{{item.id}}"><i class="{{item.logo}}"></i>
+              <a routerLink="category/{{item.id}}"><i class="{{item.logo}}"></i>
                 <span>{{item.name}}</span></a>
             </li>
 
