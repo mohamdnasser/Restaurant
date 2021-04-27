@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { OrderitemsComponent } from './components/orderitems/orderitems.component';
 import { CategoryItemsComponent } from './components/category-items/category-items.component';
 import { RouterModule, Routes } from '@angular/router';
+import { DropdownMenuComponent } from './components/dropdown-menu/dropdown-menu.component';
 
 const routes: Routes = [
 
@@ -31,7 +32,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     OrderitemsComponent,
-    CategoryItemsComponent
+    CategoryItemsComponent,
+    DropdownMenuComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
