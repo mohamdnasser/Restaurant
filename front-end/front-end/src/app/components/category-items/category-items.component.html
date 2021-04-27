@@ -1,17 +1,14 @@
     
-    
-    
-    
-    
-    
-    
     <ul>
-          <li routerLinkActive="active" class="active"><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li routerLinkActive="active"><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
 
 
           <li  routerLinkActive="active" *ngFor="let item of categoryArray">
-              <a routerLink="category/{{item.id}}"><i class="{{item.logo}}"></i>
-                <span>{{item.name}}</span></a>
+              <a routerLink="category/{{item.id}}"><i class="{{item.logo}}">
+
+            </i>
+                <span>{{item.name}}</span>
+              </a>
             </li>
 
             <!-- https://www.filgoal.com/videos -->

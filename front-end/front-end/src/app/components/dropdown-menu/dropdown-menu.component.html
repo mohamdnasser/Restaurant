@@ -1,11 +1,13 @@
 
 
-
 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
 
 
-    <a  *ngFor="let item of categoryArray" class="dropdown-item" routerLink="/category/{{item.id}}">{{item.name}}</a>
+    <a  routerLinkActive="drop-down-menu" *ngFor="let item of categoryArray" class="dropdown-item" routerLink="/category/{{item.id}}">
+    
+         <i class="{{item.logo}}"></i> {{item.name}}
+    </a>
 
 
 
