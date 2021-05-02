@@ -1,6 +1,6 @@
 package com.spring.restaurant.controller;
 
-import com.spring.restaurant.model.Category;
+
 import com.spring.restaurant.model.Order;
 
 
@@ -14,6 +14,10 @@ import java.util.List;
 @CrossOrigin("http://localhost:4200")
 @RequestMapping("/api/")
 public class OrderController {
+
+
+//    http://localhost:4200/api/orderByKey
+
 
     private OrderService orderService;
 
@@ -39,8 +43,5 @@ public class OrderController {
     public List<Order> getOrdersByCategoryId(@RequestParam String word){
         return orderService.getOrdersByKey(word);
     }
-
-
-
 
 }
