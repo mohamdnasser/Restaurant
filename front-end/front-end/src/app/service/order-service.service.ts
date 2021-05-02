@@ -12,19 +12,19 @@ export class OrderServiceService {
                                           
   private baseUrl: string = 'http://localhost:8080/api/';
   constructor(private http: HttpClient) { }
-
-
-
+  
+  
+  
   getOrders(): Observable<Order[]>{
     // return this.http.get<Order[]>( `${this.baseUrl}allOrders` ).pipe(
       return this.http.get<Order[]>( `${this.baseUrl}allOrders` ).pipe(
-      map(
-        Response =>Response
-      )
-    )
-  }
-
-
+        map(
+          Response =>Response
+          )
+          )
+        }
+        
+        
   getOrdersByCategoryId(id): Observable<Order[]>{
     return this.http.get<Order[]>(`${this.baseUrl}category?id=${id}`).pipe(
       map(
