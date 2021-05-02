@@ -9,10 +9,12 @@ import { CategoryItemsComponent } from './components/category-items/category-ite
 import { RouterModule, Routes } from '@angular/router';
 import { DropdownMenuComponent } from './components/dropdown-menu/dropdown-menu.component';
 import { SearchOrderComponent } from './components/search-order/search-order.component';
+import { OrderDetailsComponent } from './components/order-details/order-details.component';
 
 const routes: Routes = [
 
-
+  // http://localhost:4200/order
+  {path: 'order/:id' , component: OrderDetailsComponent},
 
   // http://localhost:4200/category
   {path: 'category' , component: OrderitemsComponent},
